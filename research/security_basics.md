@@ -69,11 +69,9 @@ By inspecting packets of data and enforcing policies, firewalls help **block una
 
 ---
 
----
 
 ## 🔒 2. Encryption
 
-## 🔒 Encryption
 
 **Encryption** is the process of converting readable information (**plaintext**) into an unreadable form (**ciphertext**) using an algorithm and a key.  
 Only authorized parties who possess the correct decryption key can convert the ciphertext back to its original readable form.  
@@ -193,8 +191,7 @@ Encryption is the foundation of digital security — protecting our personal, fi
 
 ---
 
-## 3. Secure Network Configurations
-## 🧱 Secure Network Configurations
+## 🧱 3.  Secure Network Configurations
 
 **Secure network configuration** refers to the process of designing, setting up, and maintaining a computer network in such a way that it minimizes vulnerabilities and prevents unauthorized access, misuse, or data loss.  
 It is the foundation of network security and plays a crucial role in defending against attacks like malware infections, phishing, and network intrusions.
