@@ -17,7 +17,7 @@ A **firewall** is a security device (hardware or software) that monitors and fil
 ### 🔹 Example
 **Windows:** Enable and configure *Windows Defender Firewall.*  
 **Linux (UFW):**
-```bash
+
 sudo ufw enable
 sudo ufw status
 sudo ufw allow 22/tcp
@@ -40,7 +40,7 @@ sudo ufw deny 80/tcp
 - HTTPS websites use **TLS/SSL** to encrypt data between your browser and the server.  
 - VPNs use encryption to secure all internet traffic through a virtual tunnel.  
 - You can encrypt files on Linux using:
-```bash
+
 gpg -c filename.txt
 
 
@@ -60,7 +60,7 @@ Proper configuration of network devices ensures the network is not left open to 
 
 ### 🔹 Example (UFW on Linux)
 Use these UFW commands to harden a Linux host quickly:
-```bash
+
 # Set default policies
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
