@@ -1,1 +1,31 @@
 
+# 📡 Network Traffic Monitoring and Analysis — FireNetX
+
+## 🎯 Objective
+To monitor and analyze network traffic on the FireNetX network using **Wireshark**, identifying different types of packets (HTTP, HTTPS, DNS, ARP, etc.) and understanding their role in secure and insecure communication.
+
+---
+
+## 🌿 Steps Performed
+
+### 1. Start Wireshark Capture
+Wireshark was launched on the Kali system to capture live packets on the **“eth0”** interface.
+
+```apache
+sudo wireshark &
+```
+
+2. Capture Network Traffic
+
+Normal browsing activities and requests to https://192.168.56.102 (FireNetX portal) were generated while capture was active.
+
+Captured protocols included:
+
+DNS: for domain resolution
+
+ARP: for local IP-to-MAC mapping
+
+HTTP/HTTPS: for web traffic
+
+TCP/UDP: transport layer communication
+
