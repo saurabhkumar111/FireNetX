@@ -7,3 +7,20 @@ Secure SSH access to the Ubuntu server using key-based authentication and proper
 1. **Generated Key Pair (on Kali)**
    ```bash
    ssh-keygen -t ed25519 -C "FireNetX"
+
+2. **Deployed Public Key to Ubuntu**
+    ```bash
+    ssh-copy-id portal_admin@192.168.56.102
+
+3. **Set Permissions**
+      ```bash
+      chmod 700 ~/.ssh
+chmod 600 ~/.ssh/authorized_keys
+
+4. **Updated /etc/ssh/sshd_config**
+     ```bash
+     PubkeyAuthentication yes
+PasswordAuthentication no
+KbdInteractiveAuthentication no
+PermitRootLogin no
+AllowUsers portal_admin
