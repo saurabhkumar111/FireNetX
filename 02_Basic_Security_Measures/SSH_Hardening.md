@@ -20,7 +20,12 @@ chmod 600 ~/.ssh/authorized_keys
 4. **Updated /etc/ssh/sshd_config**
      ```bash
      PubkeyAuthentication yes
-PasswordAuthentication no
-KbdInteractiveAuthentication no
-PermitRootLogin no
-AllowUsers portal_admin
+     PasswordAuthentication no
+     KbdInteractiveAuthentication no
+     PermitRootLogin no
+     AllowUsers portal_admin
+
+5. **Restarted SSH and Verified**
+      ```bash
+      sudo systemctl restart ssh
+      ssh -v portal_admin@192.168.56.102
