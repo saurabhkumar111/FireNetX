@@ -1,4 +1,4 @@
-# Network Setup
+# 1. Network Setup
 
 ## Overview
 Set up a simple network environment, such as your home network or a virtual lab with a router and one or two connected devices.  
