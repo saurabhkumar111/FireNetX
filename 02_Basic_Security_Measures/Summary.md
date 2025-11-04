@@ -13,6 +13,7 @@ The goal is to establish a secure baseline that prevents unauthorized access, en
 - Configured and enabled UFW with strict inbound and limited allowed ports
 - Installed and configured Fail2Ban to automatically ban brute-force attempts
 - Enabled HTTPS with a self-signed SSL certificate and verified redirection from HTTP to HTTPS
+- My website (PadhoLikho.com) already deployed on Ubunut Server
 - Performed connectivity and service verification using curl, ss, and ufw status
 
 ---
