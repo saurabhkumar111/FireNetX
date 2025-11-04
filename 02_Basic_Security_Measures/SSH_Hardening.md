@@ -1,4 +1,4 @@
-# SSH Hardening
+# 2. SSH Hardening
 
 ## Objective
 Secure SSH access to the Ubuntu server using key-based authentication and proper configuration restrictions.
