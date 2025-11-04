@@ -1,4 +1,4 @@
-# 02_Basic_Security_Measures
+# Basic_Security_Measures
 
 ## Objective
 This section focuses on applying essential security measures across all virtual machines in the FireNetX lab environment.  
