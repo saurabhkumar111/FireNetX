@@ -15,7 +15,7 @@ Secure SSH access to the Ubuntu server using key-based authentication and proper
 3. **Set Permissions**
       ```bash
       chmod 700 ~/.ssh
-chmod 600 ~/.ssh/authorized_keys
+      chmod 600 ~/.ssh/authorized_keys
 
 4. **Updated /etc/ssh/sshd_config**
      ```bash
@@ -29,3 +29,11 @@ chmod 600 ~/.ssh/authorized_keys
       ```bash
       sudo systemctl restart ssh
       ssh -v portal_admin@192.168.56.102
+
+---
+**Verification**
+
+Password login disabled ✅
+Key authentication only ✅
+Root login disabled ✅
+User restriction applied ✅
