@@ -1,4 +1,4 @@
-<img width="857" height="833" alt="firenetx_screenshot_tls_handshake" src="https://github.com/user-attachments/assets/e0e6cb25-359b-425b-a4e8-158a5c960838" /># Fail2Ban Configuration
+# Fail2Ban Configuration
 
 ## Objective
 Prevent brute-force login attempts by automatically banning IPs that exceed a set number of failed SSH logins.
@@ -39,6 +39,6 @@ Status for the jail: sshd
 ```
 
 ---
-<img width="857" height="833" alt="firenetx_screenshot_tls_handshake" src="https://github.com/user-attachments/assets/41b6d4a4-78b4-4a33-b174-0306e37268ea" />
+
 
 **✅ Confirmed working: failed SSH attempts trigger bans as expected.**
