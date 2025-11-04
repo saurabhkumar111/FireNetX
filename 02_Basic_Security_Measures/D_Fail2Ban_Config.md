@@ -1,6 +1,3 @@
-
-## 🚫 **4. Fail2Ban_Config.md**
-
 # Fail2Ban Configuration
 
 ## Objective
@@ -11,9 +8,10 @@ Prevent brute-force login attempts by automatically banning IPs that exceed a se
 sudo apt install fail2ban -y
 sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
 sudo nano /etc/fail2ban/jail.local
+```
 
 ## Configured jail.local (excerpt)
-```bash
+```ini
 [sshd]
 enabled  = true
 port     = ssh
@@ -21,15 +19,16 @@ banaction = ufw
 maxretry = 3
 findtime = 5m
 bantime  = 10m
+```
 
-##Service Enable & Verification
+## Service Enable & Verification
 ```bash
 sudo systemctl enable --now fail2ban
 sudo fail2ban-client status sshd
+```
 
-
-##Sample Output
-```bash
+## Sample Output
+```text
 Status for the jail: sshd
 |- Filter
 |  |- Currently failed: 0
@@ -37,17 +36,8 @@ Status for the jail: sshd
 `- Actions
    |- Currently banned: 1
    `- Total banned: 2
-
+```
 
 ---
 
 **✅ Confirmed working: failed SSH attempts trigger bans as expected.**
-
-
-
-
-
-
-
-
-
