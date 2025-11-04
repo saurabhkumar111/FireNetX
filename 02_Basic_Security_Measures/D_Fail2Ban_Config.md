@@ -27,7 +27,7 @@ sudo systemctl enable --now fail2ban
 sudo fail2ban-client status sshd
 ```
 
-## Sample Output
+## Output
 ```text
 Status for the jail: sshd
 |- Filter
