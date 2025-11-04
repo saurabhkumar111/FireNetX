@@ -1,0 +1,14 @@
+# 📡 Network Traffic Monitoring and Analysis — FireNetX
+
+## 🎯 Objective
+To monitor and analyze network traffic on the FireNetX network using **Wireshark**, identifying different types of packets (HTTP, HTTPS, DNS, ARP, etc.) and understanding their role in secure and insecure communication.
+
+---
+
+## 🌿 Steps Performed
+
+### 1. Start Wireshark Capture
+Wireshark was launched on the Kali system to capture live packets on the **“eth0”** interface.
+
+```bash
+sudo wireshark &
