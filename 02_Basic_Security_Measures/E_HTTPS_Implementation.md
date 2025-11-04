@@ -3,6 +3,8 @@
 
 ## Objective
 Enable secure HTTPS access using SSL/TLS certificates and configure redirection from HTTP to HTTPS.
+I want to let you know that **Padholikho.com** is a custom EdTech demo site hosted inside the FireNetX virtual lab.
+It is a deliberately simple web application used for learning, testing, and demonstrating security hardening, web-server configuration, and common web vulnerabilities in a controlled environment.
 
 ## Steps Performed
 
@@ -35,6 +37,11 @@ RewriteEngine On
 RewriteCond %{HTTPS} !=on
 RewriteRule ^/?(.*) https://%{SERVER_NAME}/$1 [R=301,L]
 ```
+
+### 5. HTTPS setup proof
+
+The part where I generated and installed the SSL certificate (firenetx.crt) and accessed the secure portal (the padlock issue I mentioned).
+
 
 ## Verification
 ```bash
