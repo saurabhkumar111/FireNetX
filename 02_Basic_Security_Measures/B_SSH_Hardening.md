@@ -30,6 +30,10 @@ Secure SSH access to the Ubuntu server using key-based authentication and proper
       sudo systemctl restart ssh
       ssh -v portal_admin@192.168.56.102
 
+
+---
+<img width="1918" height="437" alt="sshd" src="https://github.com/user-attachments/assets/e6a601f5-4e97-4b2f-b271-860785ed2ef9" />
+
 ---
 **Verification**
 
