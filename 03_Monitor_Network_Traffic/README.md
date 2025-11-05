@@ -29,12 +29,36 @@ Save fail2ban status and ban lists.
 
 Archive artifacts and snapshot VM (post-test).
 
-## Tools Used
-- Wireshark
-- tcpdump
-- tshark
+## Artifacts produced (recommended)
 
-## Labs
-- Packet capture analysis
-- Protocol dissection
-- Traffic filtering
+metadata.txt (tester, date_utc, kali_ip, ubuntu_ip, capture_iface, pcap_file)
+
+firenetx_capture_<ts>.pcap
+
+system_info.txt, ip_addr.txt, listening_ports_before.txt
+
+ufw_status_before.txt, ssh_effective_config_before.txt
+
+auth.log_initial, apache_access_initial.log, apache_error_initial.log
+
+curl_http_response.txt, curl_https_response.txt, nmap_full_scan.txt
+
+ssh_failed_attempts.log, web_fuzz_results.txt
+
+tshark_http_summary.txt, auth_log_correlated.txt, apache_access_from_kali.txt
+
+fail2ban_status.txt, fail2ban_details.txt
+
+pcap_protocol_hierarchy.png, pcap_http_tx.png, pcap_tls_handshake.png
+
+FireNetX_artifacts_YYYY-MM-DD.tar.gz
+
+## File & naming conventions
+
+Artifacts root: ~/FireNetX_artifacts
+
+PCAP: firenetx_capture_YYYYMMDD_HHMMSS.pcap
+
+Archive: FireNetX_artifacts_YYYY-MM-DD.tar.gz
+
+Screenshots: pcap_protocol_hierarchy.png, pcap_http_tx.png, pcap_tls_handshake.png
