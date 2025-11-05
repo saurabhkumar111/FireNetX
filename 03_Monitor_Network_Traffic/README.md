@@ -6,8 +6,11 @@ Capture and analyze network traffic for the Ubuntu target, perform normal and co
 ## Quick one-line checklist
 
 Choose capture host (Kali or Ubuntu).
+
 Create artifacts folder: ~/FireNetX_artifacts (Ubuntu).
+
 Save baseline: ss -tuln, sudo ufw status numbered, sudo sshd -T | grep -E 'passwordauthentication|pubkeyauthentication|permitrootlogin'.
+
 Snapshot VM (pre-test).
 Start packet capture (Kali): tcpdump -i <iface> -s0 -w firenetx_capture_<ts>.pcap.
 Run normal tests (HTTP/HTTPS/DNS/SSH key login) and save outputs.
