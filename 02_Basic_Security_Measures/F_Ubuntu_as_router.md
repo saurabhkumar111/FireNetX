@@ -132,6 +132,8 @@ Example output:
 ```bash
 curl -4 https://example.com
 ```
+<img width="1905" height="352" alt="image" src="https://github.com/user-attachments/assets/31bfe236-23cd-4680-8ba1-8b1dfa263b32" />
+
 
 ✅ Expected: HTML output  
 ✅ IPv4 TCP connections working through router
@@ -164,6 +166,8 @@ To confirm NAT + routing:
 sudo tcpdump -i enp0s8 -n icmp
 ```
 ✅ Shows Kali → Ubuntu traffic.
+<img width="1706" height="441" alt="image" src="https://github.com/user-attachments/assets/1e85cddd-9793-40d4-93ea-2208be3d2256" />
+
 
 ## ✅ Capture WAN side (enp0s3)
 ```bash
@@ -205,31 +209,39 @@ This simplifies:
 
 ---
 
-# ✅ Suggested Folder in Repo
+# ✅ Screenshots
 
-```
-FireNetX/
-└── docs/
-    └── router-verification.md
-```
+**ip route**
+<img width="1475" height="357" alt="image" src="https://github.com/user-attachments/assets/78ac46e9-8732-4173-a818-ef346db89d51" />
+The ip route output shows Kali has two network interfaces and two possible default routes:
 
----
+192.168.1.0/24 dev eth0 — Kali’s eth0 is on the 192.168.1.0 network with gateway 192.168.1.1.
 
-# ✅ Screenshots to Add (Optional)
+192.168.56.0/24 dev eth1 — Kali’s eth1 is on the Host-Only network to Ubuntu.
 
-Add screenshots in a folder:
-```
-docs/images/router/
-```
+There are two default routes listed. The kernel chooses which default to use based on route metrics and the momentary routing table state. In our tests we explicitly set the default route to via 192.168.56.102 dev eth1, so all IPv4 internet traffic from Kali is directed to the Ubuntu router (192.168.56.102) on eth1.
 
-Recommended:
-- `ip_route_kali.png`
-- `traceroute_kali.png`
-- `tcpdump_enp0s8.png`
-- `tcpdump_enp0s3.png`
-- `ubuntu_ip_addr.png`
+Why this proves routing via Ubuntu:
 
----
+When the default route points to 192.168.56.102, packets destined for the Internet are forwarded to that IP rather than the home gateway on eth0. This is the first required condition for making the Ubuntu VM act as Kali’s IPv4 gateway.
+
+**traceroute -n 8.8.8.8**
+<img width="1217" height="585" alt="image" src="https://github.com/user-attachments/assets/001de5d6-f401-48fd-b9e0-3c3954880908" />
+
+Hop 1 – 192.168.56.102 (Ubuntu Router)
+Confirms Kali is sending traffic to Ubuntu as the default gateway.
+
+Hop 2 – 192.168.31.1 (Home Router)
+Shows Ubuntu is forwarding traffic to your home network’s router.
+
+Hops 3–6 – 192.0.0.x
+These are internal ISP routers (carrier NAT / internal routing). Seeing them is normal.
+
+Final hop – 8.8.8.8
+Confirms packets successfully travel through Ubuntu → home router → ISP → internet.
+
+Summary:
+Traceroute proves Kali’s packets are routed through Ubuntu (first hop), then out to the internet normally.
 
 # ✅ Conclusion
 
