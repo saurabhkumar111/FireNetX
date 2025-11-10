@@ -13,7 +13,7 @@ In a larger and more complex network environment, additional security practices 
 
 Moreover, enforcing strong multi-factor authentication (MFA) across all access points and using VPNs for remote access helps protect sensitive data from interception. Regular vulnerability assessments, penetration testing, and employee awareness training further strengthen the network by identifying weak points and keeping users informed about evolving threats.
 
-Educating Others About Network Security
+Educating Others About Network Security.
 
 Educating others about network security begins with making the topic relatable and practical. Most users don’t need to understand technical jargon, but they should recognize that every careless click or reused password can endanger not just their own system but the entire organization. I would conduct short awareness sessions or create engaging demonstrations showing real-life examples of phishing, malware infections, and password attacks.
 
